@@ -1,0 +1,44 @@
+body {
+    background-color: antiquewhite;
+    /*text-align: center;*/
+    /*margin-left: 100px;
+    margin-right: 100px;*/
+}
+
+#titulo{
+    /*text-align: center;*/
+    font-family: cursive;
+}
+.containercenter{
+    display: flex;
+    /* align-items: center; centar todo contenido*/ 
+    justify-content: center;
+    flex-direction: column;
+    width: 60%;
+}
+form input{
+    width: 100%;
+    height: 30px;
+    /*padding-top: 15px;
+    padding-bottom: 15px;**/
+}
+form textarea{
+    width: 100%;
+    height: 100px;
+}
+form button{
+    width:100%;
+    height: 30px;
+    background-color: #8D91C7
+}
+.labelname{
+    font-family: fantasy;
+    text-align: left;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+
+
+
+ 
