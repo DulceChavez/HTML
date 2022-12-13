@@ -5,38 +5,45 @@
     <link rel="stylesheet" href="estilo.css" />
 </head>
 <body>
-     <h1 id="titulo">FORMULARIO DE CONTACTO:</h1>
+    <h1 id="titulo">FORMULARIO DE CONTACTO:</h1>
     <form class="formulario">
         <div class="containercenter">
-            <div>
+            <div class="containerizquierda">
                 <div class="labelname">
-                <label for="nombre">Nombre:*</label>
+                    <label for="nombre">Nombre:*</label>
                 </div>
                 <input type="text" id="nombre" name="nombre"/>
+
                 <div class="labelname">
-                <label for="correo">Correo:*</label>
+                    <label for="correo">Correo:*</label>
                 </div>
-                <input type="email" id="correo" name="correo"/>  
+                <input type="email" id="correo" name="correo"/> 
+
                 <div class="labelname">
-                <label for="telefono">Teléfono:</label>
+                    <label for="telefono">Teléfono:</label>
                 </div>
                 <input type="text" id="telefono" name="telefono"/> 
+
                 <div class="labelname">
-                <label for="sitioweb">Sitio web:</label>
+                    <label for="sitioweb">Sitio web:</label>
                 </div>
-                <input type="text" id="sitioweb" name="sitioweb"/>
+                <input type="text" id="sitioweb" name="sitioweb"/> 
+            </div>
+            <div class="containerderecha">           
                 <div class="labelname">
-                <label for="asunto">Asunto:*</label>
+                    <label for="asunto">Asunto:*</label>
                 </div>
-                <input type="text" id="asunto" name="asunto"/>
-            
-        <div class="labelname">
-        <label for="mensaje">Mensaje:*</label> 
+                <input type="text" id="asunto" name="asunto"/> 
+
+                <div class="labelname">
+                    <label for="mensaje">Mensaje:*</label> 
+                </div>
+                <textarea cols="50" rows="10"id="mensaje" name="mensaje"></textarea>
+
+                <button type="button">GUARDAR</button>
+            </div>         
+        
         </div>
-        <textarea cols="50" rows="10"id="mensaje" name="mensaje"></textarea>
-        <button type="button">GUARDAR</button>
-    </div>
-</div>
     </form>
 </body>
 </html>

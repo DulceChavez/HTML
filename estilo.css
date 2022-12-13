@@ -1,44 +1,125 @@
-body {
-    background-color: antiquewhite;
-    /*text-align: center;*/
-    /*margin-left: 100px;
-    margin-right: 100px;*/
+
+/*Media para celulares*/
+
+@media only screen and (max-width: 640px){
+    body{ 
+        margin: 0px 50px;
+        text-align: center;
+        background-color: #8D91C7;
+    }
+    #titulo{
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    .containercenter{
+        display: flex;
+/* align-items: center;/* centar todo contenido*/ 
+        justify-content: center;
+        flex-direction: column;
+/* width: 15%;*/
+    }
+    form input{
+        width: 100%;
+    /*height: 10px;*/
+    }
+    form textarea{
+        width:100%;
+    /*height: 10px;*/
+    }
+    form button{
+        width: 100%;
+        /*height: 10px; */
+        cursor: pointer;
+    }
+    .labelname{
+        align-content: center;
+    }
 }
 
-#titulo{
-    /*text-align: center;*/
-    font-family: cursive;
-}
-.containercenter{
-    display: flex;
-    /* align-items: center; centar todo contenido*/ 
-    justify-content: center;
-    flex-direction: column;
-    width: 60%;
-}
-form input{
-    width: 100%;
-    height: 30px;
-    /*padding-top: 15px;
-    padding-bottom: 15px;**/
-}
-form textarea{
-    width: 100%;
-    height: 100px;
-}
-form button{
-    width:100%;
-    height: 30px;
-    background-color: #8D91C7
-}
-.labelname{
-    font-family: fantasy;
-    text-align: left;
-    padding-top: 10px;
-    padding-bottom: 10px;
+/*Media para tablets*/
+@media only screen and (min-width:640px) and (max-width: 1023px) {
+    body{ 
+        background-color: #F0FFFF; 
+        margin-left: 100px;
+        margin-right: 100px;       
+    }
+    .containercenter{
+        display: flex;
+        /* align-items: center; centar todo contenido*/ 
+        justify-content: center;
+        flex-direction: column;
+        /*width: 30%;*/
+    }
+    form input{
+        width: 100%;
+        /*height: 30px;*/
+    }
+    form textarea{
+        width: 100%;
+        height: 30px;
+    }
+    form button{
+        width:100%;
+        height: 30px;
+        background-color: #F0E68C;
+        cursor: pointer;
+    }
+    .labelname{
+        font-family: Arial, Helvetica, sans-serif;
+        text-align: left;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
 }
 
+/*media para web*/
 
+@media only screen and (min-width: 1024px){
+    body {
+        background-color: antiquewhite;
+        /*text-align: center;*/
+        margin-left: 100px;
+        margin-right: 100px;
+    }
 
-
- 
+    #titulo{
+        /*text-align: center;*/
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+    .containercenter{
+        display: flex;
+        /* align-items: center; centar todo contenido*/ 
+        justify-content: center;
+        flex-direction: row;
+        /*width: 60%;*/
+    }
+    .containerizquierda{
+        width: 100%;
+        margin: 0px 10px;
+    }
+    .containerderecha{
+        width: 100%;
+        margin: 0px 10px;
+    }
+    form input{
+        width: 100%;
+        height: 30px;
+        /*padding-top: 15px;
+        padding-bottom: 15px;**/
+    }
+    form textarea{
+        width: 100%;
+        height: 30px;
+    }
+    form button{
+        width:100%;
+        height: 30px;
+        background-color: #8D91C7;
+        cursor: pointer;
+    }
+    .labelname{
+        font-family: fantasy;
+        text-align: left;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+}
