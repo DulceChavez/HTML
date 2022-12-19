@@ -3,47 +3,80 @@
 <head>
     <title>formulario</title>
     <link rel="stylesheet" href="estilo.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Didact+Gothic&family=Fredoka+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
 <body>
     <h1 id="titulo">FORMULARIO DE CONTACTO:</h1>
     <form class="formulario">
+    <div class="containerborder">   
         <div class="containercenter">
             <div class="containerizquierda">
                 <div class="labelname">
-                    <label for="nombre">Nombre:*</label>
+                    <span class="material-symbols-outlined">
+                        abc
+                    </span>
+                    <label class="labelicon" for="nombre">Nombre:*</label>
                 </div>
                 <input type="text" id="nombre" name="nombre"/>
 
                 <div class="labelname">
-                    <label for="correo">Correo:*</label>
+                    <span class="material-symbols-outlined">
+                        mark_email_read
+                    </span>
+                    <label class="labelicon" for="correo">Correo:*</label>
                 </div>
                 <input type="email" id="correo" name="correo"/> 
 
                 <div class="labelname">
-                    <label for="telefono">Teléfono:</label>
+                    <span class="material-symbols-outlined">
+                        phone_in_talk
+                    </span>
+                    <label class="labelicon" for="telefono">Teléfono:</label>
                 </div>
                 <input type="text" id="telefono" name="telefono"/> 
 
                 <div class="labelname">
-                    <label for="sitioweb">Sitio web:</label>
+                    <span class="material-symbols-outlined">
+                        language
+                    </span>
+                    <label class="labelicon" for="sitioweb">Sitio web:</label>
                 </div>
                 <input type="text" id="sitioweb" name="sitioweb"/> 
             </div>
             <div class="containerderecha">           
                 <div class="labelname">
-                    <label for="asunto">Asunto:*</label>
+                    <span class="material-symbols-outlined">
+                        sms_failed
+                    </span>
+                    <label class="labelicon" for="asunto">Asunto:*</label>
                 </div>
                 <input type="text" id="asunto" name="asunto"/> 
 
                 <div class="labelname">
-                    <label for="mensaje">Mensaje:*</label> 
+                    <span class="material-symbols-outlined">
+                        mark_unread_chat_alt
+                    </span>
+                    <label class="labelicon" for="mensaje">Mensaje:*</label> 
                 </div>
                 <textarea cols="50" rows="10"id="mensaje" name="mensaje"></textarea>
 
                 <button type="button">GUARDAR</button>
-            </div>         
-        
+            </div>
+            
         </div>
+        <div class="containerborderderecha"></div>
+    </div>     
     </form>
 </body>
 </html>
