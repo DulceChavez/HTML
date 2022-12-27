@@ -29,12 +29,29 @@ form button{
     padding: 5px 20px;
     margin: 5px;
     font-weight: bold;
+    cursor: pointer;
 }
 form input{
     border: 1px solid #AAAAAA;
 }
 form textarea{
     border: 1px solid #AAAAAA;
+}
+#validacionnombre{
+    font-family:'Didact Gothic', sans-serif; 
+    color: #ff0000;
+}
+#validacioncorreo{
+    font-family:'Didact Gothic', sans-serif; 
+    color: #ff0000;
+}
+#validacionasunto{
+    font-family:'Didact Gothic', sans-serif; 
+    color: #ff0000;
+}
+#validacionmensaje{
+    font-family:'Didact Gothic', sans-serif; 
+    color: #ff0000;
 }
 
 /*Media para celulares*/
@@ -58,11 +75,6 @@ form textarea{
     form textarea{
         width:100%;
     /*height: 10px;*/
-    }
-    form button{
-        /*width: 100%;*/
-        /*height: 10px; */
-        cursor: pointer;
     }
     .labelname{
         align-content: center;
@@ -134,7 +146,7 @@ form textarea{
 
     .containercenter{
         display: flex;
-        /* align-items: center; centar todo contenido*/ 
+        align-items: center; /*centar todo contenido*/ 
         justify-content: center;
         flex-direction: row;
         /*width: 60%;*/
@@ -171,5 +183,11 @@ form textarea{
     }
     .containerborder{
         margin: 10px 10%;
+    }
+    #asunto{
+        background-color: #FCCBCD;
+    }
+    #mensaje{
+        background-color: #FCCBCD;
     }
 }

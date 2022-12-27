@@ -29,6 +29,7 @@
                     <label class="labelicon" for="nombre">Nombre:*</label>
                 </div>
                 <input type="text" id="nombre" name="nombre"/>
+                    <span id="validacionnombre"></span>
 
                 <div class="labelname">
                     <span class="material-symbols-outlined">
@@ -37,6 +38,7 @@
                     <label class="labelicon" for="correo">Correo:*</label>
                 </div>
                 <input type="email" id="correo" name="correo"/> 
+                    <span id="validacioncorreo"></span>
 
                 <div class="labelname">
                     <span class="material-symbols-outlined">
@@ -61,7 +63,8 @@
                     </span>
                     <label class="labelicon" for="asunto">Asunto:*</label>
                 </div>
-                <input type="text" id="asunto" name="asunto"/> 
+                <input type="text" id="asunto" name="asunto"/>
+                    <span id="validacionasunto"></span> 
 
                 <div class="labelname">
                     <span class="material-symbols-outlined">
@@ -70,13 +73,17 @@
                     <label class="labelicon" for="mensaje">Mensaje:*</label> 
                 </div>
                 <textarea cols="50" rows="10"id="mensaje" name="mensaje"></textarea>
+                    <span id="validacionmensaje"></span>
+                    <br>
 
-                <button type="button">GUARDAR</button>
+                <button type="button" onclick="validacion()">GUARDAR</button>
+                <button type="reset" onclick="eliminar()">ELIMINAR</button>
             </div>
             
         </div>
         <div class="containerborderderecha"></div>
     </div>     
     </form>
+    <script src="miscript.js"></script> 
 </body>
 </html>
