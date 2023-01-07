@@ -45,6 +45,14 @@ form textarea{
     font-family:'Didact Gothic', sans-serif; 
     color: #ff0000;
 }
+#validaciontelefono{
+    font-family:'Didact Gothic', sans-serif; 
+    color: #ff0000;
+} 
+#validacionsitioweb{
+    font-family:'Didact Gothic', sans-serif; 
+    color: #ff0000;
+}
 #validacionasunto{
     font-family:'Didact Gothic', sans-serif; 
     color: #ff0000;
@@ -52,6 +60,16 @@ form textarea{
 #validacionmensaje{
     font-family:'Didact Gothic', sans-serif; 
     color: #ff0000;
+}
+#contador{
+    font-family: 'Didact Gothic', sans-serif;
+    float: right;
+}
+.alinear{
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
 }
 
 /*Media para celulares*/
