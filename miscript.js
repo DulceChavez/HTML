@@ -172,7 +172,16 @@ const eliminar = () => {
 
     const mensajeeli = document.getElementById('mensaje');
     document.getElementById('validacionmensaje').textContent = '';
-    mensaje.style.border = '1px solid #AAAAAA';
+    mensaje.style.border = '1px solid #AAAAAA';  
+    
+    const mensaje = document.getElementById('mensaje');
+    const contador = document.getElementById('contador');
+    mensaje.addEventListener('input', function(e) {
+    const target = e.target;
+    const longitudMax = target.getAttribute('maxlength');
+    const longitudAct = target.getAttribute('minlength');
+    contador.innerHTML = `${longitudAct}/${longitudMax}`;
+});
 }
 
 const mensaje = document.getElementById('mensaje');
