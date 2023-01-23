@@ -116,53 +116,18 @@ function limpiar (expresionnombre,expresionregular,expresiontel, sitioweb, expre
     }
     return limpiar; 
 }
-
-
-function alerta(nombre,correo,telefono, sitioweb,asunto,mensaje){
-    if (nombre.value.includes("^.{3,15}$")){
-        document.getElementById('validacionnombre').textContent = '';
-        nombre.style.border = '1px solid #AAAAAA'; 
-    }
-    if(correo.value.includes("^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$")){
-        document.getElementById('validacioncorreo').textContent = '';
-        correo.style.border = '1px solid #AAAAAA'; 
-    }
-    if (telefono.value.includes("[0-9]{10}")){
-        document.getElementById('validaciontelefono').textContent = '';
-        telefono.style.border = '1px solid #AAAAAA'; 
-    }
-    if (sitioweb.value.includes("https://") || sitioweb.value.includes("http://")){        
-        document.getElementById('validacionsitioweb').textContent = '';
-        sitioweb.style.border = '1px solid #AAAAAA';
-    }
-    if(asunto.value.includes("^.{5,50}$")){
-        document.getElementById('validacionasunto').textContent = '';
-        asunto.style.border = '1px solid #AAAAAA';
-    }
-    if(mensaje.value.includes("^.{10,100}$")){
-        document.getElementById('validacionmensaje').textContent = '';
-        mensaje.style.border = '1px solid #AAAAAA';
-    }
-
-    window.alert("Formulario enviado");
-
+function modal (){
+    document.querySelector('.modal').classList.remove('modal--show');
 }
-
-function validacion (){
-    const respuesta = CamposObligatorios(nombre,correo,asunto,mensaje);    
+function validacion (){    
+    const respuesta = CamposObligatorios(nombre,correo,asunto,mensaje);     
     if(respuesta == false){
-        expresionesRegulares(expresionnombre,expresionregular,expresiontel, sitioweb,expreg,mensajeexpre);
-        limpiar(expresionnombre,expresionregular,expresiontel, sitioweb,expreg,mensajeexpre);
+        const expresion = expresionesRegulares(expresionnombre,expresionregular,expresiontel, sitioweb,expreg,mensajeexpre);
+        if (expresion == false){
+            limpiar(expresionnombre,expresionregular,expresiontel, sitioweb,expreg,mensajeexpre);
+            document.querySelector('.modal').classList.add('modal--show');
+        }
     } 
-
-    
-    /*valnombre(nombre,expresionnombre); 
-    valcorreo(correo, expresionregular);
-    valtelefono(telefono, expresiontel);
-    valsitioweb(sitioweb);
-    valasunto(asunto, expreg);
-    valmensaje(mensaje, expreg);    
-    alerta(nombre,correo,asunto,mensaje);*/
 }    
 
 const eliminar = () => {    
@@ -200,96 +165,3 @@ mensaje.addEventListener('input', function(e) {
 });
 
 
-/*function valnombre (nombre,expresionnombre){
-    if (nombre.value ==''){   
-        document.getElementById('validacionnombre').textContent = 'El campo es requerido';
-        nombre.style.border = '1px solid #ff0000';
-    }
-
-    else if(!expresionnombre.test(nombre.value)){
-        document.getElementById('validacionnombre').textContent = 'Escribir mínimo 3 caracteres';
-        nombre.style.border = '1px solid #ff0000'; 
-    }
-
-    else{
-        document.getElementById('validacionnombre').textContent = '';
-        nombre.style.border = '1px solid #AAAAAA'; 
-    }
-}
-
-function valcorreo (correo,expresionregular){    
-    if(correo.value ==''){   
-        document.getElementById('validacioncorreo').textContent = '*El campo es requerido';
-        correo.style.border = '1px solid #ff0000';
-    }
-    
-    else if (!expresionregular.test(correo.value)){
-        document.getElementById('validacioncorreo').textContent = '*Formato de correo incorrecto';
-        correo.style.border = '1px solid #ff0000'; 
-    }
-    else{
-        document.getElementById('validacioncorreo').textContent = '';
-        correo.style.border = '1px solid #AAAAAA'; 
-    }
-}
-
-function valtelefono(telefono,expresiontelefono){    
-    if (telefono.value == ''){
-        document.getElementById('validaciontelefono').textContent = '';
-        telefono.style.border = '1px solid #AAAAAA';
-    }
-    else if(!expresiontelefono.test(telefono.value)){
-        document.getElementById('validaciontelefono').textContent = 'Longitud de 10 números';
-        telefono.style.border = '1px solid #ff0000';   
-    } 
-    else{
-        document.getElementById('validaciontelefono').textContent = '';
-        telefono.style.border = '1px solid #AAAAAA';
-    }
-}
-
-function valsitioweb(sitioweb){    
-    if (sitioweb.value == ''){
-        document.getElementById('validacionsitioweb').textContent = '';
-        sitioweb.style.border = '1px solid #AAAAAA';
-    }
-    else if(sitioweb.value.includes("https://") || sitioweb.value.includes("http://")){        
-        document.getElementById('validacionsitioweb').textContent = '';
-        sitioweb.style.border = '1px solid #AAAAAA';        
-    }
-    else {        
-        document.getElementById('validacionsitioweb').textContent = 'Comenzar con http:// o https://';
-        sitioweb.style.border = '1px solid #ff0000';
-    }
-}
-
-function valasunto (asunto, expreg){
-    if(asunto.value ==''){   
-        document.getElementById('validacionasunto').textContent = '*El campo es requerido';
-        asunto.style.border = '1px solid #ff0000';
-    }
-    
-    else if (!expreg.test(asunto.value)){
-        document.getElementById('validacionasunto').textContent = 'Escribir minimo 5 caracteres';
-        asunto.style.border = '1px solid #ff0000'; 
-    }
-    else{
-        document.getElementById('validacionasunto').textContent = '';
-        asunto.style.border = '1px solid #AAAAAA'; 
-    }
-}
-
-function valmensaje(mensaje,mensajeexpre){
-    if (mensaje.value ==''){   
-        document.getElementById('validacionmensaje').textContent = '*El campo es requerido';
-        mensaje.style.border = '1px solid #ff0000';
-    }
-    else if(!mensajeexpre.test(mensaje.value)){
-        document.getElementById('validacionmensaje').textContent = 'Escribir mínimo 10 caracteres';
-        mensaje.style.border = '1px solid #ff0000'; 
-    }
-    else{
-        document.getElementById('validacionmensaje').textContent = '';
-        mensaje.style.border = '1px solid #AAAAAA'; 
-    }
-}*/
