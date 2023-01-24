@@ -77,12 +77,13 @@ function expresionesRegulares(expresionnombre,expresionregular,expresiontel, sit
     return expresion;
 }
 
-function limpiar (expresionnombre,expresionregular,expresiontel, sitioweb, expreg,mensajeexpre){
-    let limpiar = true;
-    if(expresionnombre.test(nombre.value)){
-        document.getElementById('validacionnombre').textContent = '';
-        nombre.style.border = '1px solid #AAAAAA'; 
-        limpiar = false;        
+function limpiar (){
+    let expresiones = ['nombre','correo','telefono','sitioweb','asunto','mensaje'];
+        for(let i = 0; i<expresiones.length; i++ ){
+            document.getElementById(expresiones[i]).style.border ='1px solid #AAAAAA'; 
+        }
+}    
+    /*if(expresionnombre.test(nombre.value)){
     }
 
     if (expresionregular.test(correo.value)){
@@ -115,7 +116,7 @@ function limpiar (expresionnombre,expresionregular,expresiontel, sitioweb, expre
         limpiar = false;
     }
     return limpiar; 
-}
+}*/
 function modal (){
     document.querySelector('.modal').classList.remove('modal--show');
 }
@@ -124,8 +125,9 @@ function validacion (){
     if(respuesta == false){
         const expresion = expresionesRegulares(expresionnombre,expresionregular,expresiontel, sitioweb,expreg,mensajeexpre);
         if (expresion == false){
-            limpiar(expresionnombre,expresionregular,expresiontel, sitioweb,expreg,mensajeexpre);
-            document.querySelector('.modal').classList.add('modal--show');
+                limpiar();
+                document.querySelector('.modal').classList.add('modal--show');
+            
         }
     } 
 }    
@@ -163,5 +165,3 @@ mensaje.addEventListener('input', function(e) {
     const longitudAct = target.value.length;
     contador.innerHTML = `${longitudAct}/${longitudMax}`;
 });
-
-
